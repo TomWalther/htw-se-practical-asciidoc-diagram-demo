@@ -29,15 +29,47 @@ testdot
 @enduml
 ....
 
+
+.BobAlice
+[plantuml, "{diagramsdir}/BobAlice", svg]
+....
+@startuml
+Bob ->Alice : Gut'n Tag
+@enduml
+....
+
 Hinweise zur Einrichtung siehe zugehörige Aufgabenstellung.
 
 === Eingebettet
 
+
+
 Ein Beispiel für ein direkt im Dokument eingebettetes PlantUML-Diagramm.
 
-// diagram placeholder
+.Klassendiagramm mit PlantUML 
+[plantuml, "{diagramsdir}/syntax-example1", svg]  
+....
+class Graphic 
+interface Shape <<Interface>> {
+  draw()
+}
+class Circle
+class Triangle
+class Square
+
+Graphic -> Shape
+Shape <|.. Circle
+Shape <|.. Triangle
+Shape <|.. Square
+....
 
 === Inkludiert
+
+
+.ExampleUserCase
+
+[plantuml, "/plantuml/ExampleUserCase.puml", svg]
+
 
 Ein Beispiel für ein im Dokument inkludiertes PlantUML-Diagramm als externe Datei.
 
