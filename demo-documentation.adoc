@@ -1,6 +1,7 @@
 = Demo-Dokumentation
-Vorname Nachname <vorname.nachname@htw-dresden.de>
+Tom Walther <tom.walther2@htw-dresden.de>
 include::attributes.inc.adoc[]
+:PLANTUML_OUTPUT_DIR: plantuml-output
 
 Praktikumsbeispiel für die Verwendung von Diagrammen mit PlantUML in Asciidoctor.
 
@@ -65,13 +66,11 @@ Shape <|.. Square
 
 === Inkludiert
 
-
-.ExampleUserCase
-
-[plantuml, "/plantuml/ExampleUserCase.puml", svg]
-
-
 Ein Beispiel für ein im Dokument inkludiertes PlantUML-Diagramm als externe Datei.
 
-// diagram placeholder
+.Include ExampleUserCase Diagram
+[plantuml, "ExampleUserCase", svg]
+....
+include::plantuml/ExampleUserCase.puml[]
+....
 
